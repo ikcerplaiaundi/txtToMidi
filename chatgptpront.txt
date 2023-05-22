@@ -1,0 +1,2 @@
+ haz una melodia original,en el mismo formato que el ejemplo que te doy .Aquí tienes una versión de  "Tocata y Fuga" de Beethoven en formato MIDI:
+C1 E1 G1 C2 E2 G2 B2 A1 F1 D1 G1 B1 E1 C1 G1 E1 C1 F1 D1 A1 G1
