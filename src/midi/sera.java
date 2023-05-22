@@ -8,14 +8,14 @@ public class sera {
 
         // Tempo inicial y velocidad de la nota
         int tempo = 120;
-        int velocity = 1;
+        int velocity = 127;
 
         try {
             // Leer el archivo de texto
             BufferedReader reader = new BufferedReader(new FileReader(filename));
 
             // Crear una secuencia MIDI
-            Sequence sequence = new Sequence(Sequence.PPQ, 255);
+            Sequence sequence = new Sequence(Sequence.PPQ, 960);
 
             // Crear una pista MIDI
             Track track = sequence.createTrack();
