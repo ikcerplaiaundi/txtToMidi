@@ -1,2 +1,1 @@
-C4q D4q E4q C4q E4q G4h
-E4q F4q G4h
+C4 D4 E4 C4 E4 G4 E4 F4 E5

@@ -8,7 +8,7 @@ public class sera {
 
         // Tempo inicial y velocidad de la nota
         int tempo = 120;
-        int velocity = 64;
+        int velocity = 8;
 
         try {
             // Leer el archivo de texto
@@ -21,8 +21,8 @@ public class sera {
             Track track = sequence.createTrack();
 
             // Variables para las notas y duraciones
-            int noteValue = 0;
-            int durationValue = 0;
+            long noteValue = 0;
+            long durationValue = 0;
 
             // Leer el archivo de texto línea por línea
             String line;
@@ -37,7 +37,8 @@ public class sera {
                     // Convertir la nota y duración a valores MIDI
                     int pitch = getPitch(note);
                     if (pitch != -1) {
-                        int durationMs = getDuration(duration, tempo);
+                        long durationMs = getDuration(duration, tempo);
+                    
 
                         // Crear eventos de nota MIDI y añadirlos a la pista
                         track.add(new MidiEvent(new ShortMessage(ShortMessage.NOTE_ON, 0, pitch, velocity), noteValue));
@@ -92,12 +93,12 @@ public class sera {
     }
 
     // Método para obtener la duración de una nota en milisegundos
-    private static int getDuration(String duration, int tempo) {
-        int value = 0;
-        if (duration.length() >= 2) {
-            value = Integer.parseInt(duration.substring(1));
+    private static long getDuration(String duration, int tempo) {
+        long value = 0;
+        if (duration.length() >= 1) {
+            value = Long.parseLong(duration);
         }
-        int durationMs = (int) (60000.0 / tempo * value);
+        long durationMs = (long) (60000.0 / tempo * value);
         return durationMs;
     }
 }
